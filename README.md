@@ -49,6 +49,43 @@ COMMIT;
 if ($hasNotBeenVisited && $bound) {
             $this->query("SELECT * FROM $this->_tablename WHERE id = $id"); 
             $item = $this->_stmt->fetch(PDO::FETCH_OBJ);
+
+nonindexedcollections table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.050029993057251
+
+
+collections table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.017174959182739
+
+
+collectionspkonly table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.02197003364563
+
+
+collectionsparentkeyonly table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.031018972396851
+
+
 ```
 - You may have not noticed how beneficial the `collectionsparentkey` **table** really is.
 
@@ -65,4 +102,41 @@ if ($hasNotBeenVisited && $bound) {
 if ($hasNotBeenVisited && $bound) {
             $this->query("SELECT * FROM $this->_tablename WHERE id = $id LIMIT 1"); 
             $item = $this->_stmt->fetch(PDO::FETCH_OBJ);
+
+nonindexedcollections table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.027072906494141
+
+
+collections table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.014981031417847
+
+
+collectionspkonly table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.02208685874939
+
+
+collectionsparentkeyonly table:
+
+
+
+Cycles: 13
+
+Elapsed Time: 0.015010833740234
+
+
 ```
