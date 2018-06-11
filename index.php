@@ -25,7 +25,7 @@ class Collections {
         $bound = $id > -1;
 
         if ($hasNotBeenVisited && $bound) {
-            $this->query("SELECT * FROM $this->_tablename WHERE id = $id");
+            $this->query("SELECT * FROM $this->_tablename WHERE id = $id LIMIT 1"); 
             $item = $this->_stmt->fetch(PDO::FETCH_OBJ);
             if ($item->type == 0) {
                 //echo "Traversed into Collection: $id</br>";
