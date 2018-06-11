@@ -57,8 +57,8 @@ if ($hasNotBeenVisited && $bound) {
         - very fast at gets
         - excellent balance
         - moderate at inserts and updates 
-        - cons
-            - Can eventually have its limitations in some scenarios where and pk is needed.
+    - cons
+        - Can eventually have its limitations in some scenarios where and pk is needed.
 
 ```
 
